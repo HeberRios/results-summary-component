@@ -119,19 +119,24 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 2rem;
+    gap: 2rem;
     font-family: var(--ff-regular);
     background-color: var(--clr-white);
 }
 
 /* SUMMARY CARD STYLES */
 .summary-card {
+    min-width: 23.4375rem;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 0 2rem 1rem var(--clr-pale-blue);
 }
 
 /* RESULT CONTAINER STYLES */
 
 .result-container {
+    max-width: 31.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,6 +170,7 @@ h1 {
 
     p:nth-child(1) {
         font-size: 3rem;
+        font-size: clamp(3rem, 6.75dvw, 5rem);
         font-weight: var(--fw-extra-bold);
         color: var(--clr-white);
     }
@@ -175,13 +181,13 @@ h1 {
 }
 
 .result-keyword {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 3.125dvw, 1.75rem);
     font-weight: var(--fw-bold);
     color: var(--clr-white);
 }
 
 .result-paragraph {
-    font-size: 1rem;
+    font-size: clamp(1rem, 2.125dvw, 1.125rem);
     text-align: center;
 }
 
@@ -194,9 +200,13 @@ h1 {
     padding: 2rem;
 
     h2 {
-        font-size: 1.125rem;
         color: var(--clr-dark-gray-blue);
     }
+}
+
+h1,
+h2 {
+    font-size: clamp(1.125rem, 2.375dvw, 1.4rem);
 }
 
 /* SUMMARY CATEGORIES CONTAINER */
@@ -239,7 +249,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    font-size: 0.875rem;
+    font-size: clamp(0.875rem, 1.87dvw, 1rem);
     font-weight: var(--fw-bold);
 }
 
@@ -248,7 +258,7 @@ h1 {
     align-items: center;
     gap: 0.5rem;
 
-    font-size: 0.875rem;
+    font-size: clamp(0.875rem, 1.87dvw, 1rem);
     color: var(--clr-dark-gray-blue-transparent);
     font-weight: var(--fw-bold);
 }
@@ -282,4 +292,41 @@ h1 {
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+.attribution a:hover,
+.attribution a:focus {
+    color: hsl(228, 99%, 70%);
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 48.125rem) {
+    body {
+        padding: 2rem;
+    }
+    .summary-card {
+        flex-direction: row;
+        border-radius: 2rem;
+    }
+
+    .result-container {
+        justify-content: space-between;
+        padding: 2.5rem;
+        border-radius: 2rem;
+    }
+
+    .score-number-wrapper {
+        padding: 2rem 3.7rem;
+    }
+
+    .summary-container {
+        gap: 2.25rem;
+        padding: 2.5rem;
+    }
+
+    .result-container,
+    .summary-container {
+        flex: 1;
+    }
 }
