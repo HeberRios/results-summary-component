@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
--   [Solution URL]()
--   [Live Site URL]()
+-   [Solution URL](https://www.frontendmentor.io/solutions/results-summary-component-_f5m50_vqp)
+-   [Live Site URL](https://heberrios.github.io/results-summary-component/)
 
 ## My process
 
